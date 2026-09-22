@@ -2,25 +2,28 @@
 
 **Write first. Organize later.**
 
-JuPaper is a local-first freehand notebook for people who prefer the freedom of paper: handwriting, rough sketches, arrows, strike-throughs, diagrams, and text can live on the same page without forcing structure first.
+JuPaper is a local-first freehand notebook for people who prefer the freedom of paper: handwriting, rough sketches, arrows, strike-throughs, diagrams, images, and text can live on the same page without forcing structure first.
 
 ## Status
 
-JuPaper is currently in **Private Alpha**.
+JuPaper is currently in **V1 Candidate / Founder Soak**.
 
-The active product/source repository is private while sync reliability, privacy, packaging, and the commercial license are being hardened.
+The active source repository remains private while the final public-distribution gates are completed. The Windows build now has a native packaged app/installer, offline-first notebooks, iPad/Apple Pencil support, private device sync, recovery/backups, update/rollback plumbing, and automated Windows install/uninstall regression gates.
 
-Current alpha capabilities include:
+Current capabilities include:
 
-- freehand pen and highlighter
-- stroke eraser
-- positioned text
-- multiple pages
-- page deletion
-- local automatic saving
+- freehand pen, highlighter, eraser, text
+- multiple notebooks and pages
+- undo/redo and page reorder
+- image paste/import, lasso/group move, shape/arrow assist
+- local automatic saving and rolling recovery snapshots
+- cross-notebook search foundation
 - offline iPad writing
-- QR-based iPad pairing
-- private Windows/iPad sync through Tailscale
+- QR pairing, per-device authentication and revoke
+- Pencil-only palm-rejection mode
+- private Windows/iPad synchronization through Tailscale HTTPS
+- standalone Windows app + one-click installer pipeline
+- checksum-verified update/rollback pipeline
 
 ## Product direction
 
@@ -28,16 +31,18 @@ JuPaper is designed around a simple rule:
 
 > The notebook should not interrupt the thought just because the thought is messy.
 
-The long-term goal is to preserve the original handwriting and sketches exactly as written, while optionally allowing search, structure, and AI understanding later.
+Original handwriting and sketches remain canonical. Search/OCR/AI understanding are derived layers and should never silently rewrite what the user actually wrote.
 
 ## Public release
 
-This repository will be used for public product information, release notes, downloadable releases, and public issue tracking when the first distributable build is ready.
+This repository is the public product/release channel. The stable V1 installer will be published here only after the remaining real-device/privacy/signing release decisions are complete.
 
 Current development stage:
 
-`Private Alpha → Founder Daily Use → Closed Beta → V1`
+`Private Alpha → Beta → 1.0 RC → Founder Soak → V1`
+
+No `update.json` is published yet, so pre-release builds cannot accidentally auto-update to a nonexistent public artifact.
 
 ## License
 
-No source-code license is granted from this public repository at this stage. A public/commercial license will be selected before the first public source or binary release.
+No source-code license is granted from this public repository at this stage. The public/commercial distribution terms will be finalized with the first stable release.
