@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "installer_url": "https://github.com/ju0o/JuPaper/releases/download/v1.0.0/JuPaper-Setup-1.0.0.exe",
+  "sha256": "<SHA256_OF_1.0.0_INSTALLER>",
+  "notes_url": "https://github.com/ju0o/JuPaper/releases/tag/v1.0.0",
+  "mandatory": false,
+  "rollback_version": "0.12.0-rc1",
+  "rollback_url": "https://github.com/ju0o/JuPaper/releases/download/v0.12.0-rc1/JuPaper-Setup-0.12.0-rc1.exe",
+  "rollback_sha256": "<SHA256_OF_0.12.0_RC1_INSTALLER>"
+}
