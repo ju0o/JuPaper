@@ -1,48 +1,76 @@
 # JuPaper
 
-**Write first. Organize later.**
+> **Write first. Organize later.**
 
-JuPaper is a local-first freehand notebook for people who prefer the freedom of paper: handwriting, rough sketches, arrows, strike-throughs, diagrams, images, and text can live on the same page without forcing structure first.
+JuPaper is a local-first freehand notebook for people who think better when handwriting, sketches, arrows, text, and images can live together without forcing structure too early.
 
-## Status
-
-JuPaper is currently in **V1 Candidate / Founder Soak**.
-
-The active source repository remains private while the final public-distribution gates are completed. The Windows build now has a native packaged app/installer, offline-first notebooks, iPad/Apple Pencil support, private device sync, recovery/backups, update/rollback plumbing, and automated Windows install/uninstall regression gates.
-
-Current capabilities include:
-
-- freehand pen, highlighter, eraser, text
-- multiple notebooks and pages
-- undo/redo and page reorder
-- image paste/import, lasso/group move, shape/arrow assist
-- local automatic saving and rolling recovery snapshots
-- cross-notebook search foundation
-- offline iPad writing
-- QR pairing, per-device authentication and revoke
-- Pencil-only palm-rejection mode
-- private Windows/iPad synchronization through Tailscale HTTPS
-- standalone Windows app + one-click installer pipeline
-- checksum-verified update/rollback pipeline
-
-## Product direction
-
-JuPaper is designed around a simple rule:
+The core rule is simple:
 
 > The notebook should not interrupt the thought just because the thought is messy.
 
-Original handwriting and sketches remain canonical. Search/OCR/AI understanding are derived layers and should never silently rewrite what the user actually wrote.
+## What JuPaper supports
 
-## Public release
+- freehand pen and highlighter
+- eraser and text
+- multiple notebooks and pages
+- undo / redo
+- page reordering
+- image paste and import
+- lasso and grouped movement
+- simple shape and arrow assistance
+- automatic local saving
+- rolling recovery snapshots
+- cross-notebook search groundwork
+- offline iPad writing
+- Apple Pencil support
+- QR device pairing
+- per-device authentication and revoke
+- private Windows ↔ iPad sync
+- Windows app packaging and installer flow
+- checksum-verified update / rollback flow
 
-This repository is the public product/release channel. The stable V1 installer will be published here only after the remaining real-device/privacy/signing release decisions are complete.
+## Local-first by default
 
-Current development stage:
+Original handwriting and sketches remain canonical.
 
-`Private Alpha → Beta → 1.0 RC → Founder Soak → V1`
+Search, OCR, and future AI understanding are treated as derived layers. They should never silently replace or rewrite the original page.
 
-No `update.json` is published yet, so pre-release builds cannot accidentally auto-update to a nonexistent public artifact.
+## Device model
+
+JuPaper is being built around a practical two-device workflow:
+
+```text
+Windows desktop
+  ↕ private sync
+iPad + Apple Pencil
+```
+
+The notebook remains useful offline, while synchronization is an optional layer rather than a requirement for writing.
+
+## Status
+
+**V1 candidate / pre-release.**
+
+The current build includes the main notebook workflow, offline-first storage, recovery, device pairing, private synchronization, and Windows packaging infrastructure.
+
+A stable public installer will be published only after the remaining real-device, privacy, signing, and release checks are complete.
+
+## Release path
+
+```text
+Private Alpha → Beta → 1.0 RC → V1
+```
+
+Pre-release builds are intentionally prevented from silently updating to a nonexistent stable artifact.
+
+## Product principles
+
+- Writing must stay fast and low-friction.
+- The original page is the source of truth.
+- Offline use should remain useful.
+- Recovery matters as much as editing.
+- Sync should be optional and understandable.
 
 ## License
 
-No source-code license is granted from this public repository at this stage. The public/commercial distribution terms will be finalized with the first stable release.
+Distribution and source-code licensing terms will be finalized with the first stable public release.
